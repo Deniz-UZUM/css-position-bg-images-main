@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+  position: relative; /* Body'ye position relative ekledim */
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Header Bölümü */
+header {
+  display: flex;
+  height: 52px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.header-left {
+  width: 15%;
+  background-color: #9966ff;
+}
+
+.logo {
+  width: 70%;
+  background-color: #ff9933;
+  display: flex;
+  /* justify-content: center; */
+  padding-left: 20px;
+  align-items: center;
+  font-size: 24px;
+}
+
+.header-right {
+  width: 15%;
+  background-color: #9966ff;
+}
+
+/* Hero Bölümü */
+.hero {
+  max-width: 1140px;
+  height: 400px; /* px eksikti, düzelttim */
+  background-size: contain;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* WhatsApp Butonu - Düzeltilmiş */
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: calc(50% - 570px + 20px); /* Container'ın sağ kenarına hizalamak için hesaplama */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  z-index: 99;
+}
+
+.cta-button {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  width: 60px;
+  height: 20px;
+  background-color: #ff5722;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 10px;
+  padding: 0 0 0 0;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+/* Küçük ekranlar için WhatsApp butonu düzeltmesi */
+@media (max-width: 1200px) {
+  .whatsapp-button {
+    right: 20px; /* Küçük ekranlarda sağ kenara sabit mesafe */
+  }
+}
+
+/* İçerik Bölümü */
+.content {
+  min-height: 300px;
+  padding: 20px;
+}
